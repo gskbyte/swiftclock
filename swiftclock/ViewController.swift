@@ -64,7 +64,7 @@ class ViewController: UIViewController {
 
     @IBAction func scheduleAlarm(sender: AnyObject) {
         let notification = UILocalNotification()
-        self.alarmLabel.text = "Alarm at " + self.alarmDatePicker.date.description
+        self.alarmLabel.text = "Alarm at " + timeString(self.alarmDatePicker.date)
         notification.fireDate = self.alarmDatePicker.date
         notification.alertTitle = "Alarm!"
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
